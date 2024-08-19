@@ -5,7 +5,7 @@ This repository contains the configuration and setup instructions for deploying 
 
 ## Overview
 
-The `runner.yaml` manifest provided in this repository defines a Kubernetes RunnerDeployment, which deploys a self-hosted GitHub Actions runner in your Kubernetes cluster. This runner is configured to work with the `moby-org/hng_boilerplate_golang_web` repository and is labeled as `Mobi`.
+The `runner.yaml` manifest provided in this repository defines a Kubernetes RunnerDeployment, which deploys a self-hosted GitHub Actions runner in your Kubernetes cluster. This runner is configured to work with the `prime-kube/hng_boilerplate_golang_web` repository and is labeled as `Kalio`.
 
 ## Prerequisites
 
@@ -110,7 +110,7 @@ Check if the runner pod is running:
 kubectl get pods -w
 ```
 
-You should see a pod named `mobi-runner` in the Running state.
+You should see a pod named `kalio-runner` in the Running state.
 
 ### 5. Run the Logs Command
 
@@ -154,7 +154,7 @@ on: workflow_dispatch
 
 jobs:
   build_and_test:
-    runs-on: Mobi    
+    runs-on: Kalio    
     env:
       TEST_USERNAME: postgres
       TEST_PASSWORD: password
